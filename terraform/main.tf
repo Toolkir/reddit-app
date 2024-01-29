@@ -26,6 +26,7 @@ resource "aws_instance" "WebServer_for_otus_reddit_app" {
   instance_type          = "t2.micro"
   key_name               = "toolkir"
   vpc_security_group_ids = [aws_security_group.sg_otus_reddit_app.id]
+  user_data = filebase64("./startup_scripts/install_components.sh")
 }
 
 output "instance_public_ip" {
