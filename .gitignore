@@ -1,0 +1,10 @@
+*.tfstate
+*.tfstate.*.backup
+*.tfstate.backup
+*.tfvars
+*.retry
+.terraform/
+.terraform.lock.hcl
+jdauphant.nginx
+vault.key
+dd.md
