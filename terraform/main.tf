@@ -5,7 +5,7 @@ provider "aws" {
 resource "aws_security_group" "sg_otus_reddit_app" {
   name        = "SG for otus reddit app"
 dynamic "ingress" { 
-  for_each = [ "80", "22", "443" , "9292" ] 
+  for_each = [ "22", "9292" ] 
   content {
     from_port        = ingress.value
     to_port          = ingress.value
